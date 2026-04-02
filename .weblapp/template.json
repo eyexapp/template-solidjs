@@ -1,0 +1,33 @@
+{
+  "name": "solidjs",
+  "displayName": "SolidJS",
+  "description": "SolidJS reactive frontend framework with fine-grained reactivity and no virtual DOM",
+  "category": "frontend",
+  "language": "typescript",
+  "framework": "solidjs",
+  "stack": ["solidjs", "typescript", "vite"],
+  "features": ["fine-grained-reactivity", "no-virtual-dom", "signals", "jsx", "fast-refresh"],
+  "commands": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "test": "npm test"
+  },
+  "packageManager": "npm",
+  "ci": {
+    "workflowTemplate": "solidjs",
+    "runner": "ubuntu-latest",
+    "runtime": {
+      "name": "node",
+      "version": "20",
+      "setup": "actions/setup-node@v4",
+      "cache": "npm"
+    },
+    "services": {},
+    "steps": {
+      "install": "npm ci",
+      "build": "npm run build",
+      "test": "npm test",
+      "lint": null
+    }
+  }
+}
